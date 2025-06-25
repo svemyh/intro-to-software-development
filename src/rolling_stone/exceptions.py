@@ -1,2 +1,0 @@
-class InvalidPlayerNameException(Exception):
-    pass
