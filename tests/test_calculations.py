@@ -38,3 +38,14 @@ def test_inverse_gardners_equation() -> None:
     assert gardners_equation(inverse_gardners_equation(density)) == pytest.approx(
         density
     )
+
+def test_gardners_equation_negative_velocity() -> None:
+    velocity = -1000  # m/s
+    with pytest.raises(ValueError) as e:
+        gardners_equation(velocity)
+
+
+def test_inverse_gardners_equation_negative_density() -> None:
+    density = -1000  # g/cm3
+    with pytest.raises(ValueError) as e:
+        inverse_gardners_equation(density)
