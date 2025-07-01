@@ -39,6 +39,7 @@ def test_inverse_gardners_equation() -> None:
         density
     )
 
+
 def test_gardners_equation_negative_velocity() -> None:
     velocity = -1000  # m/s
     with pytest.raises(ValueError) as e:
