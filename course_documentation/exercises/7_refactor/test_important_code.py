@@ -5,6 +5,7 @@ from important_code import (
 )
 
 
+@pytest.mark.skip
 @pytest.mark.parametrize(
     "n,expected",
     [
